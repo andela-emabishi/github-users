@@ -6,6 +6,5 @@ export default function getUsers() {
   );
 }
 
-
 // getUsers().then((response) => console.log(response))
 // TODO profile picture, stars, username

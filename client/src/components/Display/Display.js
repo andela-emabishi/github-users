@@ -1,10 +1,10 @@
 import React from 'react';
 
 export default class Display extends React.Component {
-  handleRepoClick = (event) => {
+  handleRepoClick = (user) => event => {
     event.preventDefault();
     const login = event.target.value;
-    this.props.handleRepoClick(login);
+    this.props.handleRepoClick(user);
   }
   render() {
     console.log('display', this.props.users)
@@ -16,7 +16,7 @@ export default class Display extends React.Component {
               <img src={user.avatar_url} alt=""/>
               <h4>{user.login}</h4>
               <a>Repositories</a>
-              <button value={user.login} onClick={this.handleRepoClick}>CLICK HERE</button>
+              <button onClick={this.handleRepoClick(user)}>CLICK HERE</button>
             </li>
           ))
         }
