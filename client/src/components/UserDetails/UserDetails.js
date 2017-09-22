@@ -25,6 +25,7 @@ export default class UserDetails extends React.Component {
   }
 
   render() {
+    console.log('followers', this.state.numberOfFollowers)
     return (
       <div className="ui centered raised orange card">
         <a className="image">
@@ -33,7 +34,6 @@ export default class UserDetails extends React.Component {
         <div className="content">
           <a className="header">{this.props.user.login}</a>
           <div className="meta">
-            <a>{this.props.user.email}</a>
             <br />
             <a href={`https://github.com/${this.props.user.login}`}>Account</a>
             <a href={`https://github.com/${this.props.user.login}/?tab=repositories`}>
@@ -42,8 +42,8 @@ export default class UserDetails extends React.Component {
             <a href={`https://github.com/${this.props.user.login}?tab=followers`}>
               Followers
             </a>
+            <a>{this.state.numberOfFollowers}</a>
             <br />
-            <a>{this.props.user.location}</a>
           </div>
         </div>
       </div>
