@@ -4,8 +4,6 @@ import './card.css';
 export default class Display extends React.Component {
 
   handleRepoClick = user => event => {
-    event.preventDefault();
-    const login = event.target.value;
     this.props.handleRepoClick(user);
   };
   render() {

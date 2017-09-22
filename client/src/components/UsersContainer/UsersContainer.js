@@ -12,7 +12,7 @@ export class UsersContainer extends React.Component {
     this.state = {
       users: defaultUsers,
       error: "",
-      login: ""
+      login: "",
     };
   }
 

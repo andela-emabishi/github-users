@@ -35,9 +35,11 @@ export default class UserDetails extends React.Component {
           <a className="header">{this.props.user.login}</a>
           <div className="meta">
             <br />
-            <span>Blog</span>
+            <span>Name</span>
             <br />
-            <a>{this.state.user.blog}</a>
+            <span>{this.state.user.name}</span>
+            <br />
+            <a href={`${this.state.user.blog}`}>Blog</a>
             <br />
             <span>Location</span>
             <br />
@@ -48,6 +50,9 @@ export default class UserDetails extends React.Component {
             <br />
             <span>Following</span>
             <span>{this.state.user.following}</span>
+            <br />
+            <span>Public Repos</span>
+            <span>{this.state.user.public_repos}</span>
             <br />
           </div>
         </div>
