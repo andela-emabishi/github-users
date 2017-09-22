@@ -21,7 +21,6 @@ export class UsersContainer extends React.Component {
   };
 
   handleRepoClick = user => {
-    console.log(`A user has been clicked, ${user.login}`, user);
     this.setState({ user });
     this.props.history.push('/' + user.login);
   };

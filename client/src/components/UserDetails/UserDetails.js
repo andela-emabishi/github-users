@@ -26,15 +26,27 @@ export default class UserDetails extends React.Component {
 
   render() {
     return (
-      <div className="ui card">
-        <div className="image">
+      <div className="ui centered raised orange card">
+        <a className="image">
           <img src={this.props.user.avatar_url} alt="" />
-        </div>
+        </a>
         <div className="content">
           <a className="header">{this.props.user.login}</a>
-          <a className="header">Followers</a>
-          <div className="meta">{this.state.numberOfFollowers}</div>
+          <div className="meta">
+            <a>{this.props.user.email}</a>
+            <br />
+            <a href={`https://github.com/${this.props.user.login}`}>Account</a>
+            <a href={`https://github.com/${this.props.user.login}/?tab=repositories`}>
+              Repositories
+            </a>
+            <a href={`https://github.com/${this.props.user.login}?tab=followers`}>
+              Followers
+            </a>
+            <br />
+            <a>{this.props.user.location}</a>
+          </div>
         </div>
-      </div>);
+      </div>
+    );
   }
 }

@@ -7,7 +7,6 @@ export default class Display extends React.Component {
     this.props.handleRepoClick(user);
   }
   render() {
-    console.log('display', this.props.users)
     return (
       <ul>
         {
