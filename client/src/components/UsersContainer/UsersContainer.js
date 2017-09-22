@@ -9,6 +9,7 @@ export default class UsersContainer extends React.Component {
     this.state = {
       users: defaultUsers,
       error: '',
+      login: ''
     }
   }
 
@@ -16,8 +17,9 @@ export default class UsersContainer extends React.Component {
     this.setUsers();
   }
 
-  handleRepoClick = (user) => {
-    console.log('A user has been clicked', user)
+  handleRepoClick = (login) => {
+    console.log(`A user has been clicked, ${login}`)
+    this.setState({ login });
   }
 
   setUsers = () => {
