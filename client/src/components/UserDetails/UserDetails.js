@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+import './card.css';
+
 export default class UserDetails extends React.Component {
   constructor(props) {
     super(props);
@@ -24,12 +26,15 @@ export default class UserDetails extends React.Component {
 
   render() {
     return (
-    <div>
-      <img src={this.props.user.avatar_url} alt=""/>
-      {this.props.user.login}
-      {this.props.user.id}
-      {this.state.numberOfFollowers}
-    </div>
-  )
+      <div className="ui card">
+        <div className="image">
+          <img src={this.props.user.avatar_url} alt="" />
+        </div>
+        <div className="content">
+          <a className="header">{this.props.user.login}</a>
+          <a className="header">Followers</a>
+          <div className="meta">{this.state.numberOfFollowers}</div>
+        </div>
+      </div>);
   }
 }
