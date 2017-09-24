@@ -1,11 +1,9 @@
 import React from 'react';
-import './card.css';
+import '../shared/card.css';
 
 export default class Display extends React.Component {
 
   handleRepoClick = user => event => {
-    event.preventDefault();
-    const login = event.target.value;
     this.props.handleRepoClick(user);
   };
   render() {
