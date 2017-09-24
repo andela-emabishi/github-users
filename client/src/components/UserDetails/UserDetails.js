@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import './card.css';
+import '../shared/card.css';
 
 export default class UserDetails extends React.Component {
   constructor(props) {

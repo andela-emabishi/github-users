@@ -1,5 +1,5 @@
 import React from 'react';
-import './card.css';
+import '../shared/card.css';
 
 export default class Display extends React.Component {
 

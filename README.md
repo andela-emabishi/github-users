@@ -5,7 +5,7 @@ Display a sub set of github users and their details
 - nodeJS
 
 ## Usage
-Run `npm install && cd client && npm install` at the root of the project then create a .env file at the root of the `client` folder and populate it with the following.
+Run `npm run install` at the root of the project then create a .env file at the root of the `client` folder and populate it with the following.
 
 ```
 REACT_APP_CLIENT_SECRET=<github-client-secret>

@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd client && npm run start"
+    "start": "cd client && npm run start",
+    "install": "cd client && npm install"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,4 @@
     "url": "https://github.com/andela-emabishi/github-users/issues"
   },
   "homepage": "https://github.com/andela-emabishi/github-users#readme",
-  "dependencies": {
-    "axios": "^0.16.2"
-  }
 }
