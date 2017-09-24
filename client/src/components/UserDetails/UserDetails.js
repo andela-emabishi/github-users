@@ -3,6 +3,8 @@ import axios from 'axios';
 
 import '../shared/card.css';
 
+import { getUser } from '../../api/server';
+
 export default class UserDetails extends React.Component {
   constructor(props) {
     super(props);
@@ -16,10 +18,10 @@ export default class UserDetails extends React.Component {
   }
 
   fetchUser() {
-    axios.get(`https://api.github.com/users/${this.props.user.login}?client_id=${process.env.REACT_APP_CLIENT_ID}&client_secret=${process.env.REACT_APP_CLIENT_SECRET}`)
+    const login = this.props.user.login
+    getUser(login)
     .then((response) => {
       const user = response.data;
-      console.log('user', user)
       this.setState({
         user
       })

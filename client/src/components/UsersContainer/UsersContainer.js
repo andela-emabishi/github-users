@@ -1,7 +1,7 @@
 import React from "react";
 import Display from "../Display/Display";
 import defaultUsers from "../../defaultData";
-import getUsers from "../../api/server";
+import {getUsers} from "../../api/server";
 import UserDetails from '../UserDetails/UserDetails'
 
 import { withRouter, Switch, Route } from "react-router-dom";
